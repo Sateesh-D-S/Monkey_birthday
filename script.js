@@ -521,7 +521,7 @@ function showToast(msg, dur = 2800) {
   ctx.fillStyle = 'rgba(255,255,255,.85)';
   ctx.font = 'bold 20px "Noto Sans Kannada", sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('✦ ತಿಕ್ಕಿ ಬಹಿರಂಗಪಡಿಸಿ! ✦', W / 2, H / 2 - 10);
+  ctx.fillText('✦ Scrach madu✦', W / 2, H / 2 - 10);
   ctx.font = '14px "Noto Sans Kannada", sans-serif';
   ctx.fillStyle = 'rgba(255,255,255,.6)';
   ctx.fillText('ನಿಮ್ಮ ರಹಸ್ಯ ಆಶ್ಚರ್ಯ ಅಡಗಿದೆ…', W / 2, H / 2 + 18);
@@ -616,13 +616,13 @@ function showToast(msg, dur = 2800) {
 ═══════════════════════════════ */
 (function Quotes() {
   const quotes = [
-    { text: "ನಿನ್ನ ನಗು ನೋಡಿದಾಗ ಪ್ರಪಂಚ ಚೆಂದ ಎನಿಸುತ್ತದೆ.", author: "— ಪ್ರೀತಿಯಿಂದ" },
-    { text: "ನೀನು ಇಲ್ಲದ ದಿನ ಸೂರ್ಯನಿಲ್ಲದ ಆಕಾಶದಂತೆ.", author: "— ಹೃದಯದಾಳದಿಂದ" },
-    { text: "ಪ್ರತಿ ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ ಮತ್ತೊಂದು ವರ್ಷ ನೀನು ಜೀವನದಲ್ಲಿ ಬೆಳಗಿದ ಸಂದರ್ಭ.", author: "— ಜೊತೆಗಿರಿ ಸದಾ" },
-    { text: "ನಿನ್ನ ಕಣ್ಣುಗಳಲ್ಲಿ ನಕ್ಷತ್ರಗಳ ಹೊಳಪಿದೆ, ನಿನ್ನ ಹೃದಯದಲ್ಲಿ ಸ್ವರ್ಗದ ಸ್ನೇಹವಿದೆ.", author: "— ಅನಂತ ಪ್ರೀತಿ" },
-    { text: "ಜನ್ಮದಿನ ಒಂದು ದಿನ ಮಾತ್ರ, ಆದರೆ ನೀನು ಪ್ರತಿ ದಿನ ಕೊಡುವ ಸಂತೋಷ ಶಾಶ್ವತ.", author: "— ನಿಮ್ಮ ಹೃದಯದ ಸ್ನೇಹಿತ" },
-    { text: "ಈ ಪ್ರಪಂಚ ನಿನ್ನ ನಗಿನಿಂದ ಹೆಚ್ಚು ಸುಂದರ, ನಿನ್ನ ಇರುವಿಕೆಯಿಂದ ಹೆಚ್ಚು ಅರ್ಥ.", author: "— ಯಾವತ್ತೂ ನಿನ್ನ ಬೆನ್ನಿಗಿದ್ದೇನೆ" },
-    { text: "ನಿನ್ನ ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ ಒಂದು ಹಬ್ಬ — ಜೀವನ ಈ ರೀತಿ ಚೆಂದ ಆಗಿ ಹೊಳೆಯಲು ನಿನ್ನಂತಹವರು ಬೇಕು.", author: "— ಪ್ರೀತಿ ಪೂರ್ಣ" }
+    { text: "A true friend is someone who stays when the rest of the world walks away.", author: "— ಸದಾ ನಿನ್ನ ಜೊತೆ" },
+    { text: "Your friendship is the greatest strength in my life.", author: "— ಹೃದಯದಿಂದ" },
+    { text: "Life feels complete when I have a friend like you.", author: "— ನಿನ್ನ ಸ್ನೇಹಿತ" },
+    { text: "Friendship means having someone like you by my side.", author: "— ಕೃತಜ್ಞತೆಯಿಂದ" },
+    { text: "With you, I never feel alone.", author: "— ಸದಾ ಬೆಂಬಲ" },
+    { text: "Moments spent with you are my most precious memories.", author: "— ನೆನಪಿನಲ್ಲಿ" },
+    { text: "Thank you for always standing by me.", author: "— ನಿನ್ನವನೇ" }
   ];
 
   const qText = $('#quote-text');
