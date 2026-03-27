@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯಗಳು ಡಾಕ್ಟ್ರೇ 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Sans+Kannada:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Portrait Overlay -->
+  <div id="portrait-overlay">
+    <div class="rotate-msg">
+      <div class="rotate-icon">📱</div>
+      <p>ಅತ್ಯುತ್ತಮ ಅನುಭವಕ್ಕಾಗಿ ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನವನ್ನು <strong>landscape mode</strong>ಗೆ ತಿರುಗಿಸಿ ✨</p>
+    </div>
+  </div>
+
+  <!-- Fullscreen Button -->
+  <button id="fullscreen-btn" title="ಪೂರ್ಣ ಪರದೆ">
+    <svg id="fs-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v2H5v4H3zm12 0h6v6h-2V5h-4zM3 13h2v4h4v2H3zm16 4h-4v2h6v-6h-2z"/></svg>
+    <svg id="fs-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M5 16h3v3h2v-5H5zm3-8H5V5H3v5h5zm6 11h2v-3h3v-2h-5zm2-11V5h-2v5h5V8z"/></svg>
+  </button>
+
+  <!-- Audio Player -->
+  <div id="audio-player">
+    <button id="music-btn" class="music-btn">
+      <span class="music-icon">♪</span>
+      <span class="music-label">ಸಂಗೀತ ಪ್ಲೇ ಮಾಡಿ</span>
+    </button>
+    <div class="music-bars" id="music-bars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <audio id="bg-music" loop>
+    <source src="audio/wavemaster-happy-birthday-155461.mp3" type="audio/mpeg" />
+  </audio>
+  
+  <!-- Birthday Song (plays after cake cut) -->
+  <audio id="birthday-song">
+    <source src="audio/wavemaster-happy-birthday-155461.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Particles -->
+  <div id="hearts-layer" aria-hidden="true"></div>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- NAV BAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">🌸 ಚೆಂದದ ಹುಡುಗಿ ✨</span>
+      <div class="nav-links">
+        <a href="#hero">ಮುಖಪುಟ</a>
+        <!-- <a href="#bday-girl">ಪಾತ್ರ</a> -->
+        <a href="#love-letter">ನನ್ನ ಬರಹ ನಿನಗಾಗಿ</a>
+        <a href="#gallery">ಫೋಟೋಗಳು</a>
+        <a href="#gifts">ಉಡುಗೊರೆ</a>
+        <a href="#quotes">ಉಲ್ಲೇಖಗಳು</a>
+        <a href="#write-msg">ನಿಮ್ಮ ಸಂದೇಶ</a>
+        <a href="#wishes">ಶುಭಾಶಯ</a>
+      </div>
+      <button class="nav-burger" id="nav-burger">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="star-field" id="star-field"></div>
+
+    <div class="hero-layout">
+      <div class="hero-content">
+        <p class="hero-pre animate-in" style="--d:.1s">✦ ಇಂದು ನಿನ್ನ ವಿಶೇಷ ದಿನ ✦</p>
+        <h1 class="hero-title animate-in" style="--d:.3s">
+          <span class="line1">ಹುಟ್ಟು</span>
+          <span class="line2">ಹಬ್ಬದ ಶುಭಾಶಯಗಳು</span>
+        </h1>
+        <span class="name-text animate-in" style="--d:.6s">ಡಾಕ್ಟ್ರೇ ✨</span>
+        <p class="hero-sub animate-in" style="--d:.8s">ಇದು ನಿನ್ನ ವಿಶೇಷ ದಿನ ನೀನು ಯಾವಾಗಲು ಈ ಕೂಸಿ ಮತ್ತು ಪ್ರೀತಿ, ಸಂತೋಷ ಯಾವತ್ತು ನಿನ್ನದಾಗಿರಬೇಕು 🌸</p>
+        <div class="hero-btns animate-in" style="--d:1s">
+          <a href="#bday-girl" class="hero-cta">
+            <!-- <span>ಜನ್ಮದಿನ ಸುಂದರಿ</span> -->
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
+          </a>
+          <a href="#love-letter" class="hero-cta alt">
+            <span>💌 ನನ್ನ ಬರಹ ನಿನಗಾಗಿ</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Animated Cake -->
+      <div class="hero-cake-wrap animate-in" style="--d:.5s">
+        <div class="big-cake" id="hero-cake">
+          <div class="cake-candle-row">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-mid"></div>
+          <div class="cake-base"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="cake-label">ಕೇಕ್ ಕಟ್ ಮಾಡಿ ಡಾಕ್ಟ್ರೇ 🎂</p>
+      </div>
+    </div>
+
+    <div class="hero-deco">
+      <div class="deco-circle c1"></div>
+      <div class="deco-circle c2"></div>
+      <div class="deco-circle c3"></div>
+    </div>
+    <div class="scroll-hint">ಎಲ್ಲ ಓದು ಮರಿಬೇಡ — ಇದು ನನ್ನ ಮನಸಿನ ಮಾತುಗಳು ಡಾಕ್ಟ್ರೆ! ↓</div>
+  </section>
+
+  <!-- ═══ TICKER ═══ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>
+..........................................ಅರಾಮಾಗಿ ಇರು ಡಾಕ್ಟ್ರೇ. ಸರಿಯಾಗಿ ಊಟ ಮಾಡು. ಎಂತ ಸಹ ಚಿಂತೆ ಮಾಡಬೇಡ. ಆರೋಗ್ಯದ ಕಡೆ ಗಮನ ಇರಲಿ. ನೀನು ಕುಸಿ ಅಲ್ಲಿ ನನ್ನ ನೆನೆಪೆ ಮಾಡಕೊತಿಯೋ ಇಲ್ಲೋ ಗೊತ್ತಿಲ್ಲ  ಆದರೆ ಏನಾದರೂ ಸ್ವಲ್ಪ ನೋವಾದರೂ ಅದನ್ನು ಮನಸ್ಸಿನಲ್ಲಿ ಇಟ್ಟುಕೊಳ್ಳಬೇಡ. ನೀನು ಯಾವತ್ತೂ ಒಬ್ಬಳೇ ಅಲ್ಲ. ನಿನ್ನ ಕರೆಗಾಗಿ ನನ್ನ ಮೊಬೈಲ್ ಯಾವಾಗಲೂ ಕಾಯುತ್ತಿರುತ್ತದೆ—ಇದನ್ನು ಎಂದಿಗೂ ಮರೆಯಬೇಡ. ಈ ಮಾತುಗಳು ಯಾವತ್ತೂ ಕೊನೆ ಆಗುವುದಿಲ್ಲ… ಮತ್ತೆ ಮತ್ತೆ ನಿನ್ನನ್ನು ನೆನಪಿಸುತ್ತಲೇ ಇರುತ್ತವೆ—ಇಲ್ಲಿಯೂ, ನಿಜ ಜೀವನದಲ್ಲಿಯೂ ಸಹ.
+</span>
+  </div>
+
+  <!-- ═══ BIRTHDAY GIRL ═══ -->
+  <!-- <section id="bday-girl">
+    <div class="section-inner">
+      <span class="section-tag reveal">ಸ್ವಾಗತ!</span>
+      <h2 class="section-title reveal">ಜನ್ಮದಿನ ಸುಂದರಿ <em>ಇಲ್ಲಿದ್ದಾಳೆ…</em></h2>
+
+      <div class="girl-stage reveal">
+        <div class="girl-scene">
+          <div class="girl-char" id="girl-char">
+            <div class="party-hat">🎉</div>
+            <div class="girl-face-wrap" id="girl-face-wrap">
+              <div class="g-eyes">
+                <div class="g-eye"><div class="g-pupil" id="pupil-l"></div></div>
+                <div class="g-eye"><div class="g-pupil" id="pupil-r"></div></div>
+              </div>
+              <div class="g-nose">•</div>
+              <div class="g-mouth" id="g-mouth">😊</div>
+              <div class="g-cheek left"></div>
+              <div class="g-cheek right"></div>
+            </div>
+            <div class="girl-hair">
+              <div class="hair-bang"></div>
+              <div class="hair-left"></div>
+              <div class="hair-right"></div>
+            </div>
+            <div class="girl-body-wrap">
+              <div class="girl-dress-body">
+                <div class="arm-left" id="arm-l"></div>
+                <div class="arm-right" id="arm-r"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="speech-bubble" id="speech-bubble">
+            <span id="bubble-text">ಆ ಬಟನ್‌ಗಳನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ! 👀</span>
+            <div class="bubble-tail"></div>
+          </div>
+        </div>
+
+        <div class="girl-actions">
+          <button class="action-btn" data-action="wave">👋 ಕೈ ಬೀಸು</button>
+          <button class="action-btn" data-action="gift">🎁 ಉಡುಗೊರೆ</button>
+          <button class="action-btn" data-action="cake">🎂 ಕೇಕ್</button>
+          <button class="action-btn" data-action="dance">💃 ನೃತ್ಯ</button>
+          <button class="action-btn" data-action="surprise">🎊 ಆಶ್ಚರ್ಯ!</button>
+          <button class="action-btn" data-action="compliment">💕 ಹೊಗಳಿಕೆ</button>
+          <button class="action-btn" data-action="tickle">😂 くすぐる</button>
+          <button class="action-btn" data-action="sing">🎵 ಹಾಡು</button>
+          <button class="action-btn" data-action="hug">🤗 ಅಪ್ಪಿಕೋ</button>
+          <button class="action-btn" data-action="kiss">💋 ಮುತ್ತು</button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ═══ EMOTION METER ═══
+  <section id="emotion-section">
+    <div class="section-inner">
+      <span class="section-tag reveal">ಮನಸ್ಸಿನ ಅಳತೆ</span>
+      <h2 class="section-title reveal">ಅವಳು ಹೇಗೆ ಭಾವಿಸುತ್ತಿದ್ದಾಳೆ<br/><em>ಇಂದು 📊</em></h2>
+      <div class="emotion-board">
+        <div class="emotion-card reveal" style="--cd:.05s">
+          <div class="e-icon">😂</div>
+          <span class="e-label">ಶುದ್ಧ ಸಂತೋಷ</span>
+          <div class="e-track"><div class="e-bar" data-pct="92"></div></div>
+          <span class="e-pct">92%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.1s">
+          <div class="e-icon">🥰</div>
+          <span class="e-label">ಪ್ರೀತಿಸಲ್ಪಡುತ್ತಿದ್ದಾಳೆ</span>
+          <div class="e-track"><div class="e-bar" data-pct="100"></div></div>
+          <span class="e-pct">100%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.15s">
+          <div class="e-icon">🥳</div>
+          <span class="e-label">ಪಾರ್ಟಿ ಮನೋಭಾವ</span>
+          <div class="e-track"><div class="e-bar" data-pct="87"></div></div>
+          <span class="e-pct">87%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.2s">
+          <div class="e-icon">🍰</div>
+          <span class="e-label">ಕೇಕ್ ತಯಾರಿ</span>
+          <div class="e-track"><div class="e-bar" data-pct="78"></div></div>
+          <span class="e-pct">78%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.25s">
+          <div class="e-icon">😭</div>
+          <span class="e-label">ಸಂತೋಷ ಕಣ್ಣೀರು</span>
+          <div class="e-track"><div class="e-bar" data-pct="64"></div></div>
+          <span class="e-pct">64%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.3s">
+          <div class="e-icon">💅</div>
+          <span class="e-label">ರಾಣಿ ಮೋಡ್</span>
+          <div class="e-track"><div class="e-bar" data-pct="99"></div></div>
+          <span class="e-pct">99%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.35s">
+          <div class="e-icon">💕</div>
+          <span class="e-label">ಪ್ರೇಮ ತೀವ್ರತೆ</span>
+          <div class="e-track"><div class="e-bar" data-pct="100"></div></div>
+          <span class="e-pct">100%</span>
+        </div>
+        <div class="emotion-card reveal" style="--cd:.4s">
+          <div class="e-icon">✨</div>
+          <span class="e-label">ಮಾಯಾ ಮಟ್ಟ</span>
+          <div class="e-track"><div class="e-bar" data-pct="95"></div></div>
+          <span class="e-pct">95%</span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ═══ LOVE LETTER ═══ -->
+  <section id="love-letter">
+    <div class="section-inner">
+      <span class="section-tag reveal">💌 ಪ್ರೇಮಪತ್ರ</span>
+      <h2 class="section-title reveal">ಪ್ರತಿ ದಿನವನ್ನು ನೀನು<br/><em>ಮನೋಹರವಾಗಿಸುತ್ತಿ</em></h2>
+      <div class="message-card reveal">
+        <div class="letter-envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">💌</div>
+        </div>
+        <div class="quote-mark">"</div>
+        <p class="letter-text">ನಿನ್ನೊಂದಿಗೆ ಕಳೆದ ಪ್ರತಿ ಕ್ಷಣವೂ ನಾನು ಮಾತುಗಳಲ್ಲಿ ಹೇಳಲಾಗದ ಅಮೂಲ್ಯ ಕೊಡುಗೆ. ಇಂದು ನಿನ್ನ ಹುಟ್ಟುಹಬ್ಬ ಮಾತ್ರವಲ್ಲ — ನಾನು ನಿನ್ನನ್ನು ಅರಿತ ದಿನಗಳ ಸ್ಮರಣೆ. ನಿನ್ನ ಮುಗುಳ್ನಗೆ ಪ್ರತಿ ಕೋಣೆಯಲ್ಲೂ ಬೆಳಕು ತುಂಬುತ್ತದೆ, ನಿನ್ನ ಹೃದಯ ನಾನು ಅರಿತ ಅತ್ಯಂತ ದಯಾಳು ಹೃದಯ.</p>
+        <p class="letter-text">ಈ ಹೊಸ ವರ್ಷ ನಿನ್ನ ಜೀವನದಲ್ಲಿ ನಿನಗೆ ಸಂತೋಷ, ಹೊಸ ಅನುಭವಗಳು ಮತ್ತು ಅಳೆಯಲಾಗದಷ್ಟು ಪ್ರೀತಿ ತರಲಿ. ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ, ಸುಂದರಿ.. 🌹</p>
+        <div class="message-signature">— ಎಲ್ಲ ಪ್ರೀತಿಯಿಂದ ♡</div>
+        <div class="message-reactions">
+          <span class="reaction-label">ಪ್ರತಿಕ್ರಿಯಿಸಿ:</span>
+          <button class="react-btn" data-r="❤️">❤️ <span>0</span></button>
+          <button class="react-btn" data-r="😭">😭 <span>0</span></button>
+          <button class="react-btn" data-r="🥰">🥰 <span>0</span></button>
+          <button class="react-btn" data-r="🎉">🎉 <span>0</span></button>
+          <button class="react-btn" data-r="💕">💕 <span>0</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PHOTO GALLERY ═══ -->
+  <section id="gallery">
+    <div class="section-inner">
+      <span class="section-tag reveal">ನಿನ್ನ ಪ್ರೀತಿಯ ನೆನೆಪುಗಳು </span>
+      <h2 class="section-title reveal"> ನನ್ನ ಜೊತೆ <br/><em>ಹಚ್ಚಿಕೊಂಡ ನಿನ್ನ ಕ್ಷಣಗಳು</em></h2>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item gi-1 frame-rose" data-index="0" data-src="images/0.jpeg" data-label="ಇಲ್ಲಿ ನನಗೆ ಗೊತ್ತಾಗತಿಲ್ಲ ಸೀರೆಗೆ ಚೆಂದ ಕಾಣತಾ ಇದೆಯಾ ಅಥವಾ ನಿನ್ನಿಂದ ಸೀರೆ ಚೆನ್ನಾಗಿ ಕಾಣತಾ ಇದೆಯಾ ಅಂತ.😂">
+          <div class="img-wrap"><img src="images/0.jpeg" alt="ನೆನಪು 1" loading="lazy"/></div>
+          <div class="gallery-overlay"><span> ಇಲ್ಲಿ ನನಗೆ ಗೊತ್ತಾಗತಿಲ್ಲ ಸೀರೆಗೆ ಚೆಂದ ಕಾಣತಾ ಇದೆಯಾ ಅಥವಾ ನಿನ್ನಿಂದ ಸೀರೆ ಚೆನ್ನಾಗಿ ಕಾಣತಾ ಇದೆಯಾ ಅಂತ.😂</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-2 frame-gold" data-index="1" data-src="images/1.jpeg" data-label="💕 ಇಲ್ಲಿ ಒಂದು ವಸ್ತುವಿಗೆ ಮರೆಲಾರದ ನೆನೆಪು ಕೊಟ್ಟವರು ಇದಾರೆ ಮತ್ತೆ ನೆನೆಪಿಗೆ ಕಾರಣ ಆದವರು ಇದಾರೆ .">
+          <div class="img-wrap"><img src="images/1.jpeg" alt="ನೆನಪು 2" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>💕 ಇಲ್ಲಿ ಒಂದು ವಸ್ತುವಿಗೆ ಮರೆಲಾರದ ನೆನೆಪು ಕೊಟ್ಟವರು ಇದಾರೆ ಮತ್ತೆ ನೆನೆಪಿಗೆ ಕಾರಣ ಆದವರು ಇದಾರೆ .</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-3 frame-plum" data-index="2" data-src="images/2.jpeg" data-label="✨ ಅಲ್ಲ ನಿಂಗೆ ಬೇರೆ ಫೋಟೋ ಸಿಯಾಗಲಿಲ್ಲವಾ ಎಡಿಟ್ ಮಾಡೋಕೆ. ಅದೇ ಫೋಟೋ ಮತ್ತೆ ಮತ್ತೆ ...............?">
+          <div class="img-wrap"><img src="images/2.jpeg" alt="ನೆನಪು 3" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>✨ ಅಲ್ಲ ನಿಂಗೆ ಬೇರೆ ಫೋಟೋ ಸಿಯಾಗಲಿಲ್ಲವಾ ಎಡಿಟ್ ಮಾಡೋಕೆ. ಅದೇ ಫೋಟೋ ಮತ್ತೆ ಮತ್ತೆ ...............?</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-4 frame-rose" data-index="3" data-src="images/3.jpeg" data-label="ಇಲ್ಲಿ ಸಮುದ್ರ ನಿನ ಸಮುದ್ರ ನೋಡತಾ ಇದಿಯಾ ಅಥವಾ ಸಮುದ್ರ ನಿನ್ನ ನೋಡತಾ ಇದೆಯಾ ಒಂದು ಗೊತ್ತ ಆಗತಿಲ್ಲ ಡಾಕ್ಟ್ರೇ .">
+          <div class="img-wrap"><img src="images/3.jpeg" alt="ನೆನಪು 4" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>ಇಲ್ಲಿ ಸಮುದ್ರ ನಿನ ಸಮುದ್ರ ನೋಡತಾ ಇದಿಯಾ ಅಥವಾ ಸಮುದ್ರ ನಿನ್ನ ನೋಡತಾ ಇದೆಯಾ ಒಂದು ಗೊತ್ತ ಆಗತಿಲ್ಲ ಡಾಕ್ಟ್ರೇ .</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-5 frame-gold" data-index="4" data-src="images/4.jpeg" data-label="🎀 ಬಹಳ ಚೆಂದ ಕಾಣತಾ ನಂದೇ ದೃಷ್ಟಿ ಆಗಬಹುದು ........ ">
+          <div class="img-wrap"><img src="images/4.jpeg" alt="ನೆನಪು 5" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>🎀 ಬಹಳ ಚೆಂದ ಕಾಣತಾ ನಂದೇ ದೃಷ್ಟಿ ಆಗಬಹುದು ........ </span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-6 frame-plum" data-index="5" data-src="images/5.jpeg" data-label="🌹ಇದು ........................... ನೀನೆ ಏನಾದರೂ ಹೇಳೋದ ಇದ್ರೆ ಹೇಳು . ">
+          <div class="img-wrap"><img src="images/5.jpeg" alt="ನೆನಪು 6" loading="lazy"/></div>
+          <div class="gallery-overlay"><span> ಇದು ........................... ನೀನೆ ಏನಾದರೂ ಹೇಳೋದ ಇದ್ರೆ ಹೇಳು .</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-7 frame-rose" data-index="6" data-src="images/6.jpeg" data-label="🙏 ನಮಸ್ತೆ ನಮ್ಮ ಪ್ರೀತಿಯ docter  ಅವರಿಗೆ.">
+          <div class="img-wrap"><img src="images/6.jpeg" alt="ನೆನಪು 7" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>🙏 ನಮಸ್ತೆ ನಮ್ಮ ಪ್ರೀತಿಯ docter  ಅವರಿಗೆ.</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-8 frame-gold" data-index="7" data-src="images/7.jpeg" data-label="✨ ನಾ ಮುಂಚೆನೇ ಹೇಳಿದೀನಿ ಪಾ.">
+          <div class="img-wrap"><img src="images/7.jpeg" alt="ನೆನಪು 8" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>✨ ನಾ ಮುಂಚೆನೇ ಹೇಳಿದೀನಿ ಪಾ.</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-9 frame-plum" data-index="8" data-src="images/8.jpeg" data-label="🌸 ಡಾಕ್ಟ್ರೇ ಬಹಳ ಚೆನ್ನಾಗಿ ಕಾನಾತಾ ಇದಿಯಾ ಪಾ .">
+          <div class="img-wrap"><img src="images/8.jpeg" alt="ನೆನಪು 9" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>🌸 ಡಾಕ್ಟ್ರೇ ಬಹಳ ಚೆನ್ನಾಗಿ ಕಾನಾತಾ ಇದಿಯಾ ಪಾ .</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+        <div class="gallery-item gi-10 frame-rose" data-index="9" data-src="images/9.jpeg" data-label="🤝 ಶಾಶ್ವತ">
+          <div class="img-wrap"><img src="images/9.jpeg" alt="ನೆನಪು 10" loading="lazy"/></div>
+          <div class="gallery-overlay"><span>🤝 ಶಾಶ್ವತ</span></div>
+          <button class="like-btn">♡</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GIFTS SECTION ═══ -->
+  <section id="gifts">
+    <div class="section-inner">
+      <span class="section-tag reveal">🎁 ಉಡುಗೊರೆಗಳು</span>
+      <h2 class="section-title reveal">ನಿನಗಾಗಿ ವಿಶೇಷ<br/><em>ಉಡುಗೊರೆಗಳು 🎀</em></h2>
+      <div class="gifts-grid">
+        <div class="gift-card reveal" style="--cd:.05s" data-gift="star">
+          <div class="gift-box" id="gift-0">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-0">
+            <div class="gift-item-icon">🌟</div>
+            <h3></h3>
+            <p>ನಾನೆ ಒಂದು ಉಡುಗೊರೆ ನಿಂಗೆ ಅಲ್ವ. ✨</p>
+          </div>
+          <button class="open-gift-btn" data-idx="0">ತೆರೆ 🎁</button>
+        </div>
+        <div class="gift-card reveal" style="--cd:.15s" data-gift="travel">
+          <div class="gift-box" id="gift-1">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-1">
+            <div class="gift-item-icon">✈️</div>
+            <!-- <h3>ಕನಸಿನ ಪ್ರಯಾಣ</h3> -->
+            <p>ಗೋವಾ ಪ್ರವಾಸ ಹೇಳಿದೀನಿ ಮರೀಬೇಡಿ.🌍</p>
+          </div>
+          <button class="open-gift-btn" data-idx="1">ತೆರೆ 🎁</button>
+        </div>
+        <div class="gift-card reveal" style="--cd:.25s" data-gift="time">
+          <div class="gift-box" id="gift-2">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-2">
+            <div class="gift-item-icon">⏰</div>
+            <h3>ಅಮೂಲ್ಯ ಸಮಯ</h3>
+            <p>ನಿನ್ನೊಂದಿಗೆ ಕಳೆಯುವ ಪ್ರತಿ ಕ್ಷಣ, ಅಮೂಲ್ಯ</p>
+          </div>
+          <button class="open-gift-btn" data-idx="2">ತೆರೆ 🎁</button>
+        </div>
+        <div class="gift-card reveal" style="--cd:.35s" data-gift="love">
+          <div class="gift-box" id="gift-3">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-3">
+            <div class="gift-item-icon">💖</div>
+            <h3>ಶಾಶ್ವತ ಪ್ರೀತಿ</h3>
+            <p>ಈ ಕುಸಿ ಮತ್ತೆ ಪ್ರೀತಿ ಕಾಳಜಿ ಯಾವತ್ತೂ ಹೀಗೆ ಇರುತ್ತೆ ಪಾ . 💞</p>
+          </div>
+          <button class="open-gift-btn" data-idx="3">ತೆರೆ 🎁</button>
+        </div>
+        <div class="gift-card reveal" style="--cd:.45s" data-gift="music">
+          <div class="gift-box" id="gift-4">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-4">
+            <div class="gift-item-icon">🎵</div>
+            <h3>ಹಾಡಿನ ಕೊಡುಗೆ</h3>
+            <p>ನೀ ಇದ್ದರೆ ಎಲ್ಲವೂ ಸರಿಯಾಗುತ್ತೆ,ನಿನ್ನ ಮಾತು ಕೇಳಿದ್ರೆ ಮನಸ್ಸು ಹಗುರವಾಗುತ್ತೆ,ನಿನ್ನ ಜೊತೆ ಇದ್ದರೆ ಟೈಮ್ ಬೇಗ ಹೋಗುತ್ತೆ, ಹೀಗೇ ಸದಾ ಹತ್ತಿರ ಇರು 🙂 🎶</p>
+          </div>
+          <button class="open-gift-btn" data-idx="4">ತೆರೆ 🎁</button>
+        </div>
+        <div class="gift-card reveal" style="--cd:.55s" data-gift="secret">
+          <div class="gift-box" id="gift-5">
+            <div class="gift-lid">
+              <div class="gift-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-h"></div>
+              <div class="gift-ribbon-v"></div>
+            </div>
+          </div>
+          <div class="gift-reveal" id="gift-reveal-5">
+            <div class="gift-item-icon">🔮</div>
+            <h3>ರಹಸ್ಯ ಉಡುಗೊರೆ</h3>
+            <p>ಈ ರಹಸ್ಯ ನೀನೆ ಹೇಳ್ಬೇಕು. ಆ ಸರ್ಪ್ರೈಸ್ ಏನ್ ಅಂತಾ . 🌠</p>
+          </div>
+          <button class="open-gift-btn" data-idx="5">ತೆರೆ 🎁</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUOTES SECTION ═══ -->
+  <section id="quotes">
+    <div class="section-inner">
+      <span class="section-tag reveal">💬 ನನ್ನ ಉಲ್ಲೇಖಗಳು</span>
+      <h2 class="section-title reveal">ಪ್ರೀತಿಯ <br/><em>ಮಾತುಗಳು 💝</em></h2>
+      <div class="quotes-carousel reveal">
+        <div class="quote-display" id="quote-display">
+          <div class="quote-icon">❝</div>
+          <p class="quote-text" id="quote-text">ನಿನ್ನ ನಗು ನೋಡಿದಾಗ ಪ್ರಪಂಚ ಚೆಂದ ಎನಿಸುತ್ತದೆ.</p>
+          <p class="quote-author" id="quote-author">— ಪ್ರೀತಿಯಿಂದ</p>
+        </div>
+        <div class="quote-nav">
+          <button class="q-btn" id="q-prev">‹</button>
+          <div class="q-dots" id="q-dots"></div>
+          <button class="q-btn" id="q-next">›</button>
+        </div>
+      </div>
+
+      <div class="quote-cards-grid">
+        <div class="quote-mini-card reveal" style="--cd:.1s">
+          <span class="qmc-emoji">🌹</span>
+          <p>"ನೀನು ಎಲ್ಲಿ ನಗುತ್ತೀಯ, ಅಲ್ಲಿ ಸ್ವರ್ಗ ಸೃಷ್ಟಿಯಾಗುತ್ತದೆ. ಇದು ಗೊತ್ತ ಇರೋದು ನನಗೆ ಮಾತ್ರ ."</p>
+        </div>
+        <div class="quote-mini-card reveal" style="--cd:.2s">
+          <span class="qmc-emoji">💫</span>
+          <p>"ನಿನ್ನ ಕಣ್ಣುಗಳು ನಕ್ಷತ್ರಗಳಿಗಿಂತ ಹೆಚ್ಚು ಹೊಳೆಯುತ್ತವೆ.ಯಾಕೋ ಗೊತ್ತಿಲ್ಲ "</p>
+        </div>
+        <div class="quote-mini-card reveal" style="--cd:.3s">
+          <span class="qmc-emoji">🦋</span>
+          <p>"ನಿನ್ನ ಪ್ರತಿ ಮಾತು ಒಂದು ಹೂವಿನಂತೆ ಅರಳುತ್ತದೆ."</p>
+        </div>
+        <div class="quote-mini-card reveal" style="--cd:.4s">
+          <span class="qmc-emoji">🌙</span>
+          <p>"ನಿನ್ನ ಚಂದಿರ ಕಾಯತಾ ಇದಾನೆ ಪಾ ."</p>
+        </div>
+        <div class="quote-mini-card reveal" style="--cd:.5s">
+          <span class="qmc-emoji">🔥</span>
+          <p>"ಕತ್ತಲಲ್ಲಿ ಬೆಳಕು ಎಷ್ಟು ಮುಖ್ಯ ಅಷ್ಟೇ ನನ್ನ ಜೀವದಲ್ಲಿ ಸಹ ನೀನು ಅಷ್ಟೇ ಮುಖ್ಯ ಡಾಕ್ಟ್ರೇ ."</p>
+        </div>
+        <div class="quote-mini-card reveal" style="--cd:.6s">
+          <span class="qmc-emoji">🎵</span>
+          <p>"ನಿನ್ನ ಜೊತೆ ಮಾತಾಡತಾ ಇದ್ದಾರೆ ಏನೋ ಕುಸಿ ಪಾ. ಯಾವತ್ತೂ ಹೀಗೆ ಮಾತಾಡತಾ ಇರು ."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LETTER & PHOTO FRAME ═══ -->
+  <section id="letter-frame">
+    <div class="section-inner">
+      <span class="section-tag reveal">💌 ನೆನಪು ಫ್ರೇಮ್</span>
+      <h2 class="section-title reveal">ಪ್ರೀತಿಯ ಪತ್ರ<br/><em>ಮತ್ತು ನೆನಪಿಸುವ ಫೋಟೋ 📸</em></h2>
+      
+      <div class="frame-container reveal">
+        <!-- Decorative Border with Emojis -->
+        <div class="frame-border">
+          <div class="border-top">
+            <span class="border-emoji">🌹</span>
+            <span class="border-emoji">💕</span>
+            <span class="border-emoji">✨</span>
+            <span class="border-emoji">💖</span>
+            <span class="border-emoji">🌸</span>
+            <span class="border-emoji">💕</span>
+            <span class="border-emoji">🌹</span>
+          </div>
+          
+          <!-- Main Frame Content -->
+          <div class="frame-main">
+            <!-- Left Side: Handwritten Letter -->
+            <div class="frame-letter">
+              <div class="letter-header">💌 ಸೋಫಿಯಾಗೆ</div>
+              <div class="letter-content">
+                <p>ನನ್ನ ಪ್ರಿಯೆ,</p>
+                <p>ನಿನ್ನನ್ನು ನೋಡಿದಾಗ ನನ್ನ ಸಾರೆ ನೆತ್ತುತ್ತಿದೆ. ನೀನು ನಾನು ಕಾದ ಅತ್ಯಂತ ಸುಂದರ ವರದಾನ.</p>
+                <p>ಪ್ರತಿ ದಿನ ನಿನ್ನೊಂದಿಗೆ ಮತ್ತೊಂದು ಹುಟ್ಟುಹಬ್ಬ. ನಿನ್ನ ನಗು ನಾವಿ ಮೂಲ, ನಿನ್ನ ಕರ ನನ್ನ ಜೀವನ.</p>
+                <p>ಈ ವರ್ಷ ನಿನಗೆ ಸೋತ ಆನಂದ, ಸಾಹಸ ಮತ್ತು ಅಂತ್ಯ ಇಲ್ಲದ ಪ್ರೀತಿ.</p>
+                <p>ಶಾಶ್ವತವಾಗಿ ನಿನ್ನದು,<br/>❤️</p>
+              </div>
+            </div>
+
+            <!-- Right Side: Photo -->
+            <div class="frame-photo">
+              <img src="images/9.jpeg" alt="ನೆನಪಿನ ಫೋಟೋ" class="frame-img" />
+              <div class="photo-overlay">💕</div>
+            </div>
+          </div>
+
+          <div class="border-bottom">
+            <span class="border-emoji">🌹</span>
+            <span class="border-emoji">💕</span>
+            <span class="border-emoji">🎀</span>
+            <span class="border-emoji">💖</span>
+            <span class="border-emoji">🌸</span>
+            <span class="border-emoji">💕</span>
+            <span class="border-emoji">🌹</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SCRATCH CARD ═══ -->
+  <section id="scratch-section">
+    <div class="section-inner centered">
+      <span class="section-tag reveal">ರಹಸ್ಯ</span>
+      <h2 class="section-title reveal">ನಿನ್ನ  ಉಡುಗೊರೆ<br/><em>ನೋಡಲು ತಿಕ್ಕಿ 🎁</em></h2>
+      <div class="scratch-container reveal">
+        <canvas id="scratch-card" width="360" height="200"></canvas>
+        <div class="scratch-message" id="scratch-msg">
+          🎁 ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ, monkey! 👑✨
+        </div>
+      </div>
+      <p class="scratch-hint reveal">ನಿನ್ನ ಬೆರಳು ☝️</p>
+    </div>
+  </section>
+
+  <!-- ═══ BIRTHDAY GAME ═══ -->
+  <section id="game-section">
+    <div class="section-inner">
+      <span class="section-tag reveal">🎮 ಬರ್ತ್‌ಡೇ ಆಟ</span>
+      <h2 class="section-title reveal">ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ<br/><em>ಆಟ ಆಡೋಣ! 🎯</em></h2>
+      <div class="game-area reveal">
+        <div class="game-header">
+          <div class="game-stat">
+            <span class="stat-label">ಅಂಕಗಳು</span>
+            <span class="stat-val" id="game-score">0</span>
+          </div>
+          <div class="game-stat">
+            <span class="stat-label">ಸಮಯ</span>
+            <span class="stat-val" id="game-timer">30</span>
+          </div>
+          <div class="game-stat">
+            <span class="stat-label">ಅತ್ಯಧಿಕ</span>
+            <span class="stat-val" id="game-high">0</span>
+          </div>
+        </div>
+        <div class="game-board" id="game-board">
+          <div class="game-start-overlay" id="game-start">
+            <div class="game-start-icon">🎂</div>
+            <h3>ಕೇಕ್ ಹಿಡಿಯಿರಿ!</h3>
+            <p>ಕ್ಲಿಕ್ ಮಾಡಿ ಕೇಕ್ ಬ್ಲಾಕ್ ಮಾಡಿ. ಬಾಂಬ್ ತಪ್ಪಿಸಿ! 💣</p>
+            <button class="game-btn" id="start-game-btn">ಆಟ ಪ್ರಾರಂಭಿಸಿ 🎮</button>
+          </div>
+        </div>
+        <div class="game-end-overlay" id="game-end" style="display:none">
+          <div class="game-end-icon">🎊</div>
+          <h3>ಆಟ ಮುಗಿಯಿತು!</h3>
+          <p class="game-final-score">ನಿಮ್ಮ ಅಂಕ: <strong id="final-score">0</strong></p>
+          <button class="game-btn" id="restart-game-btn">ಮತ್ತೆ ಆಡಿ 🔄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WISHES ═══ -->
+<section id="wishes">
+  <div class="section-inner">
+
+    <span class="section-tag reveal">✨ ಹುಟ್ಟುಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು ✨</span>
+
+    <h2 class="section-title reveal">
+      ನಿನ್ನ ಜೀವನಕ್ಕೆ<br/>
+      <em>ಆರು ಹೃದಯದ ಶುಭಾಶಯಗಳು</em>
+    </h2>
+
+    <div class="wishes-grid">
+
+      <div class="wish-card reveal" style="--cd:.1s">
+        <div class="wish-icon">🌟</div>
+        <h3>ಅನಂತ ಸಂತೋಷ</h3>
+        <p>ನಿನ್ನ ಜೀವನದ ಪ್ರತಿಯೊಂದು ಕ್ಷಣವೂ ನಗು ಮತ್ತು ಸಂತೋಷದಿಂದ ತುಂಬಿರಲಿ.</p>
+      </div>
+
+      <div class="wish-card reveal" style="--cd:.25s">
+        <div class="wish-icon">🌹</div>
+        <h3>ನಿರಂತರ ಪ್ರೀತಿ</h3>
+        <p>ನಿನ್ನ ಸುತ್ತಲೂ ಯಾವಾಗಲೂ ಪ್ರೀತಿ, ಕಾಳಜಿ ಮತ್ತು ಆತ್ಮೀಯತೆ ಇರಲಿ.</p>
+      </div>
+
+      <div class="wish-card reveal" style="--cd:.4s">
+        <div class="wish-icon">🦋</div>
+        <h3>ಕನಸಿನ ಹಾರಾಟ</h3>
+        <p>ನಿನ್ನ ಪ್ರತಿಯೊಂದು ಕನಸಿಗೂ ರೆಕ್ಕೆ ಬಂದು, ಅದು ನಿಜವಾಗುವ ದಿನಗಳು ಬರಲಿ.</p>
+      </div>
+
+      <div class="wish-card reveal" style="--cd:.55s">
+        <div class="wish-icon">💎</div>
+        <h3>ಪ್ರಕಾಶಮಾನ ಭವಿಷ್ಯ</h3>
+        <p>ನಿನ್ನ ಮುಂದಿನ ದಿನಗಳು ಬೆಳಕಿನಿಂದ ತುಂಬಿ, ನಿನ್ನ ಜೀವನ ಹೊಳೆಯಲಿ.</p>
+      </div>
+
+      <div class="wish-card reveal" style="--cd:.7s">
+        <div class="wish-icon">🌈</div>
+        <h3>ಬಣ್ಣಗಳ ಬದುಕು</h3>
+        <p>ನಿನ್ನ ಬದುಕು ಮಳೆಬಿಲ್ಲಿನಂತೆ ಸುಂದರ ಬಣ್ಣಗಳಿಂದ ಅರಳಲಿ.</p>
+      </div>
+
+      <div class="wish-card reveal" style="--cd:.85s">
+        <div class="wish-icon">🏆</div>
+        <h3>ಯಶಸ್ಸಿನ ಪಯಣ</h3>
+        <p>ನೀನು ಇಡುವ ಪ್ರತಿಯೊಂದು ಹೆಜ್ಜೆಯೂ ಯಶಸ್ಸಿನತ್ತ ನಿನ್ನನ್ನು ಕರೆದೊಯ್ಯಲಿ.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-hearts">💖 💕 💗 💓 💞</div>
+      <h2 class="footer-title">ನಿನ್ನ ಜನುಮ ದಿನಕ್ಕೆ ನನ್ನ ಪುಟ್ಟ ಸಂಕೇತ </h2>
+      <p class="footer-sub">ಪ್ರೀತಿಯಿಂದ ಬರೆಯಲಾಗಿದೆ, ಕೇವಲ ನಿನಗಾಗಿ.</p>
+      <div class="footer-kannada-msg">
+        <p>ನಿಮ್ಮ ಜೀವನ ಹೂ ತೋಟದಂತೆ ಮನೋಹರ,<br/>ನಿಮ್ಮ ನಗು ಬೆಳದಿಂಗಳಂತೆ ತಂಪು,<br/>ನಿಮ್ಮ ಕನಸು ಆಕಾಶದಷ್ಟು ವಿಶಾಲ.<br/>ಹ್ಯಾಪಿ ಬರ್ತ್‌ಡೇ ✨</p>
+      </div>
+      <div class="footer-btns">
+        <!-- <button class="restart-btn" id="restart-confetti">🎊 ಮತ್ತೆ ಆಚರಿಸಿ!</button> -->
+        <button class="restart-btn alt" id="pop-balloon-btn">🎈 ಬಲೂನ್ ಒಡೆಯಿರಿ!</button>
+        <!-- <button class="restart-btn gold" id="fireworks-btn">🎆 fireworks!</button> -->
+      </div>
+      <div class="footer-love">
+        <div class="heart-pulse">❤️</div>
+        <p>“ನನ್ನ ಜೀವನವನ್ನು ಇಷ್ಟು ಸುಂದರವಾಗಿಸಿದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು.💕</p>
+      </div>
+    </div>
+    <div class="balloon-area" id="balloon-area"></div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lb-close" id="lb-close">✕</button>
+    <button class="lb-nav prev" id="lb-prev">‹</button>
+    <img id="lb-img" src="" alt="ಸಂಪೂರ್ಣ ನೋಟ" />
+    <button class="lb-nav next" id="lb-next">›</button>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
