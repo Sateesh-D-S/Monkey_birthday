@@ -524,7 +524,7 @@ function showToast(msg, dur = 2800) {
   ctx.fillText('✦ Scrach madu✦', W / 2, H / 2 - 10);
   ctx.font = '14px "Noto Sans Kannada", sans-serif';
   ctx.fillStyle = 'rgba(255,255,255,.6)';
-  ctx.fillText('ನಿಮ್ಮ ರಹಸ್ಯ ಆಶ್ಚರ್ಯ ಅಡಗಿದೆ…', W / 2, H / 2 + 18);
+  // ctx.fillText('ನಿಮ್ಮ ರಹಸ್ಯ ಆಶ್ಚರ್ಯ ಅಡಗಿದೆ…', W / 2, H / 2 + 18);
 
   const getPos = (e) => {
     const r = canvas.getBoundingClientRect();
